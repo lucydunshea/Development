@@ -1,0 +1,26 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="projects-section">
+    <h1 class="projects-section__title">Past Projects</h1>
+    <div class="projects-section__container">
+        <div class="projects-section__project">
+            <ul class="projects-section__project-list">
+                {% for project in projects %}
+                <li class="projects-section__project-detail">
+                    <a class="projects-section__project-detail-link" href="{% url 'project_detail' project.pk %}">
+                        {% if project.image %}
+                        <div class="projects-section__project-card">
+                            <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                        </div>
+                        {% endif %}
+                        <p>{{ project.title }}</p>
+                    </a>
+                </li>
+                {% endfor %}
+
+        </div>
+        </div>
+        </div>
+{% endblock %}

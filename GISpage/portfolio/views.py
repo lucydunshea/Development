@@ -1,13 +1,19 @@
 from django.shortcuts import render
+from .models import Project
+from django.template.response import TemplateResponse
+
 
 # Create your views here.
 def home(request):
     return render(request, 'portfolio/home.html')
 
 def projects(request):
-    return render(request, 'portfolio/projects.html')
+   return TemplateResponse(request, 'portfolio/projects.html', {
+       'projects': Project.objects.all(),
+   })
 
 def project_detail(request, project_id):
+
     return render(request, 'portfolio/project_detail.html')
 
 def contact(request):
@@ -21,3 +27,6 @@ def blog(request):
 
 def blog_detail(request, blog_id):
     return render(request, 'portfolio/blog_detail.html')
+
+def cv(request):
+    return render(request, 'portfolio/cv.html')

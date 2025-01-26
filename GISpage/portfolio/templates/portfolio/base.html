@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}GIS Portfolio{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
+    <link rel="stylesheet" href="https://use.typekit.net/cmg3mqs.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'projects' %}">Projects</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
-                <li><a href="{% url 'blog' %}">Blog</a></li>
+        <nav class="base__nav">
+            <ul class="base__nav-name">
+            <li ><a class="base__nav-name-link" href="{% url 'home' %}">Lucy Dunshea.</a></li>
+            </ul>
+            <ul class="base__nav-sections">
+            <li><a class="base__nav-sections-link" href="{% url 'projects' %}">projects</a></li>
+            <li><a class="base__nav-sections-link" href="{% url 'about' %}">about</a></li>
+            <li><a class="base__nav-sections-link" href="{% url 'blog' %}">blog</a></li>
+            </ul>
+            <ul class="base__nav-contact">
+            <li><a href="mailto:lucydunshea6@gmail.com" class="base__nav-contact-link">contact</a></li>
             </ul>
         </nav>
     </header>
@@ -22,7 +28,7 @@
         {% block content %}{% endblock %}
     </main>
     <footer>
-        <p>&copy; 2024 GIS Portfolio</p>
+        <p class="base__copyright">&copy; 2024 GIS Portfolio</p>
     </footer>
 </body>
 </html>

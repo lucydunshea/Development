@@ -1,0 +1,262 @@
+/* Base Items */
+
+body {
+    background-color: #D9D8C7;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+}
+
+.base__copyright {
+    font-family: "adelle-mono", monospace;
+    font-weight: 400;
+    color: #d54315;
+    position: fixed;
+    bottom: 0;
+    font-size: 9pt;;
+}
+
+/* Navbar */
+
+.base__nav {
+   text-decoration: none;
+   font-weight: 700;
+   color:#d54315;
+   padding-top:0%;
+   display:flex;
+   flex-direction: row;
+   position: sticky;
+   background-color: #D9D8C7;
+   position: fixed;
+   width: 100%;
+}
+
+.base__nav-name {
+    list-style-type: none;
+    display: inline;
+    font-size: 24pt;
+}
+
+.base__nav-name:hover {
+    color:#5e2418;
+}
+
+.base__nav-name-link {
+    display: inline;
+    font-weight: 700;
+    color:#d54315;
+    text-decoration: none;
+}
+
+.base__nav-sections {
+    list-style-type: none;
+    display: inline;
+    padding-left: 40%;
+}
+
+.base__nav-sections-link {
+    text-decoration: none;
+    font-weight: 700;
+    color:#d54315;
+    font-size: 12pt;
+}
+
+.base__nav-contact {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline;
+    padding-left: 14%;
+}
+
+.base__nav-contact-link {
+    text-decoration: none;
+    font-weight: 700;
+    color:#d54315;
+}
+
+/* Home Section */
+
+.home-section {
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    padding-left: 15%;
+    padding-top: 120px;
+}
+.home-section__container {
+    align-items: center;
+    left: 20%;
+}
+
+.home-section__text {
+    font-family: "adelle-mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #d54315;
+}
+
+.home-section__expertise {
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.home-section__expertise-item::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+.home-section__expertise-item:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+.home-section__expertise-item::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #5e2418;
+    z-index: -1;
+    transition: transform .5s ease;
+  }
+
+.home-section__expertise-item {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 48pt;
+    font-style: bold;
+    color: #d54315;
+    position: relative;
+}
+
+.home-section__map {
+    z-index: 1;
+}
+
+.home-section__map-image {
+    position: fixed;
+    top: 0px;
+    right: 0%;
+    width: 40%;
+}
+
+
+/* Home Section Button */
+.home-section__button-container {
+    position: relative;
+    align-self: center;
+    padding-top: 5%;
+}
+
+.home-section__button {
+    border-radius: 5px;
+    outline-color: #d54315;
+    outline-width: 2pts;
+    color:#D9D8C7;
+}
+
+/* CV Section */
+
+.cv-section {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-family: "adelle-mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color:#d54315;
+}
+
+.cv-section__name {
+
+}
+
+.cv-section__title {
+    
+}
+
+.cv-section__contact {
+   
+}
+
+.cv-section__contact-item {
+
+}
+
+.cv-section__email {
+    
+}
+
+.cv-section__profile {
+    
+}
+
+.cv-section__small-heading {
+   
+}
+
+.cv-section__profile-text {
+    
+}
+
+.cv-section__skills {
+    
+}
+
+.cv-section__skills-title {
+   
+}
+
+.cv-section__skills-programming {
+    
+}
+
+.cv-section__education {
+    
+}
+
+.cv-section__education-item {
+    
+}
+
+.cv-section__education-title {
+   
+}
+
+.cv-section__education-text,
+.cv-section__syllabus,
+.cv-section__thesis,
+.cv-section__project,
+.cv-section__GPA {
+    
+}
+
+.cv-section__experience {
+    
+}
+
+.cv-section__job {
+    
+}
+
+.cv-section__job-title {
+    
+}
+
+.cv-section__job-company,
+.cv-section__job-dates {
+    
+}
+
+.cv-section__job-tasks {
+   
+}
+
+.cv-section__other-experience {
+    
+}
+
+/* Projects Styles */
+
+.projects-section__title {
+    padding-top:120px;
+}

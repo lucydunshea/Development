@@ -1,0 +1,28 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="home-section">
+  <div class="home-section__container">
+    <p class="home-section__text"><u>Wellington-based</u> BSc graduate, specialising in</p>
+      <ul class="home-section__expertise">
+    <!-- Change the links to relevant ones -->
+        <li><a class="home-section__expertise-item" href="{% url 'projects' %}">Geography.</a></li>
+        <li><a class="home-section__expertise-item" href="{% url 'projects' %}">GIS.</a></li>
+        <li><a class="home-section__expertise-item" href="{% url 'projects' %}">Climate Resilience.</a></li>
+        <li><a class="home-section__expertise-item" href="{% url 'projects' %}">Urban Design.</a></li>
+      </ul>
+  </div>
+
+<div class="home-section__map">
+    <img class="home-section__map-image" src="{% static 'portfolio/images/WellyContours-01.png' %}" alt="Wellington Map">
+    </div>
+<div class="home-section__button-container">
+  <button class="home-section__button">
+    <a href="{% url 'cv' %}">MY CV</a>
+  </button>
+</div>
+</div>
+{% endblock %}
+
+{% block title %}Home{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="project-detail-section">
+    <h1 class="project-detail-section__title">{{ project.title }}</h1>
+    <div class="project-detail-section__container">
+        <div class="project-detail-section__image">
+            {% if project.image %}
+            <img class="project-detail-section__image" src="{{ project.image.url }}" alt="{{ project.title }}">
+            {% endif %}
+        </div>
+        <div class="project-detail-section__description">
+            <h2 class="project-detail-section__description-title">Description</h2>
+            <p class="project-detail-section__description-text">{{ project.description }}</p>
+            <h2 class="project-detail-section__description-title">Technologies</h2>
+            <p class="project-detail-section__description-text">{{ project.technologies }}</p>
+            <h2 class="project-detail-section__description-title">Project pdf</h2>
+            <a class="project-detail-section__description-pdf" href="{{ project.pdf }}">{{ project.pdf }}</a>
+        </div>
+    </div>
