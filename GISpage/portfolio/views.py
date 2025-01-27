@@ -13,8 +13,10 @@ def projects(request):
    })
 
 def project_detail(request, project_id):
-
-    return render(request, 'portfolio/project_detail.html')
+    project = Project.objects.get(id=project_id)
+    return render(request, 'portfolio/project_detail.html', {
+        'project': project,
+    })
 
 def contact(request):
     return render(request, 'portfolio/contact.html')

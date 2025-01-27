@@ -9,13 +9,14 @@
             <ul class="projects-section__project-list">
                 {% for project in projects %}
                 <li class="projects-section__project-detail">
+                    <p>{{ project.title }}</p>
+                    <p>{{ project.category }}</p>
                     <a class="projects-section__project-detail-link" href="{% url 'project_detail' project.pk %}">
                         {% if project.image %}
                         <div class="projects-section__project-card">
-                            <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                            <img src="{{ project.image.url }}" class="projects-section__item-image" alt="{{ project.title }}">
                         </div>
                         {% endif %}
-                        <p>{{ project.title }}</p>
                     </a>
                 </li>
                 {% endfor %}

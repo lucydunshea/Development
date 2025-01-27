@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="base__nav">
+        <nav class="base__nav" id="navbar">
             <ul class="base__nav-name">
             <li ><a class="base__nav-name-link" href="{% url 'home' %}">Lucy Dunshea.</a></li>
             </ul>
@@ -30,5 +30,7 @@
     <footer>
         <p class="base__copyright">&copy; 2024 GIS Portfolio</p>
     </footer>
+    <script src="{% static 'portfolio/js/scripts.js' %}"></script>
 </body>
 </html>
+
