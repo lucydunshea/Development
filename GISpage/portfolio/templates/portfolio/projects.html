@@ -6,11 +6,11 @@
     <h1 class="projects-section__title">Past Projects</h1>
     <div class="projects-section__container">
         <div class="projects-section__project">
-            <ul class="projects-section__project-list">
                 {% for project in projects %}
-                <li class="projects-section__project-detail">
-                    <p>{{ project.title }}</p>
-                    <p>{{ project.category }}</p>
+                <div class="projects-section__project-card">
+                    <p class="projects-section__info">{{ project.title }}<br>{{ project.location }}<br>({{ project.start_date }}-{{ project.end_date }})
+                        
+                        </p>
                     <a class="projects-section__project-detail-link" href="{% url 'project_detail' project.pk %}">
                         {% if project.image %}
                         <div class="projects-section__project-card">
@@ -18,7 +18,7 @@
                         </div>
                         {% endif %}
                     </a>
-                </li>
+                </div>
                 {% endfor %}
 
         </div>

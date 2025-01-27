@@ -7,12 +7,19 @@
     <div class="project-detail-section__container">
         <div class="project-detail-section__image">
             {% if project.image %}
-            <img class="project-detail-section__image" src="{{ project.image.url }}" alt="{{ project.title }}">
+            <img class="project-detail-section__image" src="{{ project.detail_image.url }}" alt="{{ project.title }}">
             {% endif %}
         </div>
-        <div class="project-detail-section__description">
-            <h2 class="project-detail-section__description-title">Description</h2>
-            <p class="project-detail-section__description-text">{{ project.description }}</p>
+        <div class="project-detail-section__first">
+            <div class="project-detail-section__sketch">
+                {% if project.sketch %}
+                <img class="project-detail-section__sketch-image" src="{{ project.sketch.url }}" alt="{{ project.title }}">
+                {% endif %}
+            </div>
+            <div class="project-detail-section__description">
+                <p class="project-detail-section__description-text">{{ project.short_description }}</p>
+            </div>
+        </div>
             <h2 class="project-detail-section__description-title">Technologies</h2>
             <p class="project-detail-section__description-text">{{ project.technologies }}</p>
             <h2 class="project-detail-section__description-title">Project pdf</h2>
