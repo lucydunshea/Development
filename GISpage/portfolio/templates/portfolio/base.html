@@ -20,16 +20,13 @@
             <li><a class="base__nav-sections-link" href="{% url 'blog' %}">blog</a></li>
             </ul>
             <ul class="base__nav-contact">
-            <li><a href="mailto:lucydunshea6@gmail.com" class="base__nav-contact-link">contact</a></li>
+            <li><button href="mailto:lucydunshea6@gmail.com" class="base__nav-contact-link"><a class="base__nav-contact-button" href="mailto:lucydunshea6@gmail.com">contact</a></button></li>
             </ul>
         </nav>
     </header>
     <main>
         {% block content %}{% endblock %}
     </main>
-    <footer>
-        <p class="base__copyright">&copy; 2024 GIS Portfolio</p>
-    </footer>
     <script src="{% static 'portfolio/js/scripts.js' %}"></script>
 </body>
 </html>

@@ -25,6 +25,7 @@ class Project(models.Model):
     start_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)
     pdf = models.FileField(upload_to='project_pdfs/', blank=True, null=True)
+    slug = models.SlugField(default="", null=False)
 
     def __str__(self):
         return self.title

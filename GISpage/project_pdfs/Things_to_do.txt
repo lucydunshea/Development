@@ -1,0 +1,12 @@
+Things to do
+- Create better sketches for each project template (make them red?)
+- write an about page
+- tidy up the scroll function on the projects page
+- fix the cv button to be more custom
+- Write long descriptions for each project
+- max out at 6 projects for now
+- do an ArcGIS map embed (to show arc skills) (or mapbox) for where each project is located.
+- tidy up CV page
+
+- Write a cover letter
+- check quality of CV

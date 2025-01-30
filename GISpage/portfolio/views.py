@@ -12,8 +12,8 @@ def projects(request):
        'projects': Project.objects.all().order_by('-end_date'),
    })
 
-def project_detail(request, project_id):
-    project = Project.objects.get(id=project_id)
+def project_detail(request, slug):
+    project = Project.objects.get(slug=slug)
     return render(request, 'portfolio/project_detail.html', {
         'project': project,
     })

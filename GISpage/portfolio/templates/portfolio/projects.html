@@ -3,15 +3,14 @@
 {% block content %}
 {% load static %}
 <div class="projects-section">
-    <h1 class="projects-section__title">Past Projects</h1>
     <div class="projects-section__container">
         <div class="projects-section__project">
                 {% for project in projects %}
-                <div class="projects-section__project-card">
+                <div class="projects-section__project-card" data-type="{{ project.category }}">
                     <p class="projects-section__info">{{ project.title }}<br>{{ project.location }}<br>({{ project.start_date }}-{{ project.end_date }})
                         
                         </p>
-                    <a class="projects-section__project-detail-link" href="{% url 'project_detail' project.pk %}">
+                    <a class="projects-section__project-detail-link" href="{% url 'project_detail' project.slug %}">
                         {% if project.image %}
                         <div class="projects-section__project-card">
                             <img src="{{ project.image.url }}" class="projects-section__item-image" alt="{{ project.title }}">
