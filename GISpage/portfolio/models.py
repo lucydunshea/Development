@@ -33,9 +33,11 @@ class Project(models.Model):
 # Blog model for my writing and reflections
 class Blog(models.Model):
     title = models.CharField(max_length=200)
-    content = RichTextField(config_name="awesome_ckeditor")
+    short_description = models.CharField(max_length=300, null=True, blank=True)
+    content = RichTextField(config_name='awesome_ckeditor')
     image = models.ImageField(upload_to='blog_images/')
     created_at = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(default="", null=False)
 
     def __str__(self):
         return self.title

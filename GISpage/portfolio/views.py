@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project
+from .models import Project, Blog
 from django.template.response import TemplateResponse
 
 
@@ -31,10 +31,16 @@ def about(request):
     return render(request, 'portfolio/about.html')
 
 def blog(request):
-    return render(request, 'portfolio/blog.html')
+    blogs = Blog.objects.all().order_by('-created_at')
+    return render(request, 'portfolio/blog.html', {
+        'blogs': blogs,
+    })
 
-def blog_detail(request, blog_id):
-    return render(request, 'portfolio/blog_detail.html')
+def blog_detail(request, slug):
+    blog_post = Blog.objects.get(slug=slug)
+    return render(request, 'portfolio/blog_detail.html', {
+        'blog_post': blog_post,
+    })
 
 def cv(request):
     return render(request, 'portfolio/cv.html')
