@@ -7,7 +7,7 @@
         <div class="projects-section__project">
                 {% for project in projects %}
                 <div class="projects-section__project-card" data-type="{{ project.category }}">
-                    <p class="projects-section__info">{{ project.title }}<br>{{ project.location }}<br>({{ project.start_date }}-{{ project.end_date }})
+                    <p class="projects-section__info">{{ project.title }}<br>{{ project.location }}<br>{{ project.start_date|date:"d/m/Y" }} - {{ project.end_date|date:"d/m/Y" }}
                         
                         </p>
                     <a class="projects-section__project-detail-link" href="{% url 'project_detail' project.slug %}">
