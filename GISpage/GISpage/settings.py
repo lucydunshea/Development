@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +28,7 @@ SECRET_KEY = 'Mzcd6x4pEU3t980efTEIbtdw4kG1zQBm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['lucydunshea.co.nz', '127.0.0.1']
+ALLOWED_HOSTS = ['lucydunshea.co.nz']
 
 
 # Application definition
@@ -80,11 +82,8 @@ ASGI_APPLICATION = 'GISpage.asgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default': dj_database_url.config(default='postgres://user:password@host:port/dbname')
     }
-}
 
 
 # Password validation
