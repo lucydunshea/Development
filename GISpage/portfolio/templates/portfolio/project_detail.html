@@ -11,7 +11,7 @@
             {% endif %}
         </div>
         <div class="project-detail-section__first">
-            <div class="project-detail-section__sketch">
+            <!-- <div class="project-detail-section__sketch">
                 {% if project.mini_map %}
                 <img class="project-detail-section__sketch-image" src="{{ project.mini_map.url }}" alt="{{ project.title }}">
                 {% endif %}
@@ -19,12 +19,13 @@
             
             <div class="project-detail-section__description">
                 <p class="project-detail-section__description-text">{{ project.short_description }}</p>
-            </div>
+            </div> -->
         </div>
-            <h2 class="project-detail-section__description-title">Technologies</h2>
-            <p class="project-detail-section__description-text">{{ project.technologies }}</p>
+            <p class="project-detail-section__long-description-text">{{ project.description|safe }}</p>
         </div>
-        <button class="project-detail-section__button"><a href="{{ project.pdf.url }}" class="project-detail-section__button-text">Full Project</a></button>
+        <div class="project-detail-section__button-container">
+        <button class="project-detail-section__button"><a href="{{ project.pdf.url }}" class="project-detail-section__button-text">View Full Project</a></button>
+        </div>
     </div>
 
 </div>

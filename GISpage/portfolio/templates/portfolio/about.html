@@ -1,8 +1,109 @@
 {% extends 'portfolio/base.html' %}
+
 {% block content %}
 {% load static %}
+<div class="about-me-section">
+    <img src="{% static 'portfolio/images/me.png' %}" class="about-me__image" alt="Me">
+</div>
+<div class="cv-section">
+    <h1 class="cv-section__title">MSc Geography Student</h1>
+    <div class="cv-section__contact">
+        <p class="cv-section__contact-item">Wellington, New Zealand</p>
+        <p class="cv-section__contsct-item">+64210394892</p>
+        <a class ="cv-section__email" href="mailto:lucydunshea@gmail.com">lucydunshea6@gmail.com</a>
+    </div>
+    <div class="cv-section__profile">
+        <h3 class="cv-section__small-heading">Professional Profile</h3>
+        <p class="cv-section__profile-text">BSc Graduate (2024) and MSc in Geography candidate 
+            at the University of Canterbury, New Zealand, currently on exchange at the University 
+            of Copenhagen. I am looking for a graduate position in my field to begin early in 2026.
+            My academic journey has equipped me with a comprehensive understanding of physical geography, 
+            natural hazards, urban design, and planning principles, with a strong focus on GIS and 
+            computer programming. I am passionate about applying this skillset to contribute to the 
+            sustainable development of urban areas, particularly in the water resources management 
+            and flood resilience sector. I thrive in collaborative environments and enjoy sharing 
+            perspectives with peers from various disciplines. </p>
+    </div>
+    <div class="cv-section__skills">
+        <div class="cv-section__skills-title">
+            <h3 class="cv-section__small-heading">Skills</h3>
+        </div>
+        <div class="cv-section__skills-programming">
+            <p><strong>Programming Languages:</strong> Python, JavaScript, Typescript, HTML, CSS, R</p>
+            <p>Software: ArcGIS Pro, QGIS, GDAL, Leaflet, Cypress, Celery, Pandas, Excel, Microsoft Teams, Azure, PostgreSQL</p>
+            <p>Urban Planning: Community Engagement, Research + Report Writing, Public Health, Sustainable Development, Urban Mobility, Data Management, Transport Planning</p>
+        </div>
+    <div class="cv-section__education">
+        <h3 class="cv-section__small-heading">Education</h3>
+        <div class="cv-section__education-item">
+            <h4 class="cv-section__education-title">Master of Science majoring in Geography</h4>
+            <p class="cv-section__education-text">University of Canterbury, New Zealand</p>
+            <p class="cv-section__education-text">2024 - 2025</p>
+            <p class="cv-section__syllabus">Urban Planning & Design, Community Engagement, Climate Adaptation, Data Analysis</p>
+            <p class="cv-section__thesis">Master’s Thesis (ongoing) – Low-Cost Nature-based Solutions: Assessing the coastal 
+                inundation risk associated with relative sea level rise and the potential for nature-based solutions as a 
+                flood mitigation strategy in Petone, Wellington. Research covers landscape assessment, flood risk modelling, 
+                managed retreat principles, and community engagement.</p>
+            <p class="cv-section__project">Project - Healthy Streets Investigation: Research report on the feasibility of 
+                Transit-Oriented Development in a suburban center ahead of the installation of an MRT route in Christchurch. 
+                Responsible for setting research direction, developing automated data collection with ArcGIS Survey123 and 
+                Python scripting, and producing data visualizations with Excel and Adobe Illustrator.</p>
+            <p class="cv-section__GPA">GPA: 8.0</p>
+        </div>
+        <div class="cv-section__education-item">
+            <h4 class="cv-section__education-title">Bachelor of Science majoring in Geography</h4>
+            <p class="cv-section__education-text">University of Canterbury, New Zealand</p>
+            <p class="cv-section__education-text">2021 - 2023</p>
+            <p class="cv-section__syllabus">Syllabus: Climate Processes, GIS, Python, Environmental Science, Statistics, Physical Geography, Management</p>
+            <p class="cv-section__project">Project - New Brighton Revitalisation: Research report into the urban renewal of a beach towns’ retail centre in 
+                Christchurch. Responsible for building and maintaining working relationships with professional project contacts, managing project data 
+                collection and analysis, and presenting research findings at a conference.</p>
+            <p class="cv-section__GPA">GPA: 7.75</p>
+        </div>
+    </div>
+    <div class="cv-section__experience">
+        <h3 class="cv-section__small-heading">Industry Experience</h3>
+        <div class="cv-section__job">
+            <h4 class="cv-section__job-title">Application Specialist Intern</h4>
+            <p class="cv-section__job-company">Trimble Inc., Christchurch, New Zealand</p>
+            <p class="cv-section__job-dates">November 2023 - February 2024</p>
+            <ul class="cv-section__job-tasks">
+                <li>Built test scripts in Cypress test automation software using Typescript to reduce manual test time on 3 features in Trimble Map Viewer.</li>
+                <li>Delivered and collaborated on the UI/UX design of new features for a cloud-based mobile mapping application using Figma.</li>
+                <li>Performed systems testing on novel GNSS positioning software and hardware in the field.</li>
+            </ul>
+        </div>
+        <div class="cv-section__job">
+            <h4 class="cv-section__job-title">GIS Laboratory Tutor</h4>
+            <p class="cv-section__job-company">University of Canterbury, Christchurch, New Zealand</p>
+            <p class="cv-section__job-dates">February 2024 - June 2024</p>
+            <ul class="cv-section__job-tasks">
+                <li>Provided technical advice to 26 students enrolled in a 300-level health geography course.</li>
+                <li>Taught the use of ArcGIS Pro, Excel, and personal movement tracking software to assess the connection between environment and wellbeing.</li>
+                <li>Worked with course professors and tutor peers to identify issues and opportunities in the lab assignments.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="cv-section__other-experience">
+        <h3 class="cv-section__small-heading">Other Experience</h3>
+        <div class="cv-section__job">
+            <h4 class="cv-section__job-title">Font of House, Pizza Chef</h4>
+            <p class="cv-section__job-company">Base Food by Fire, Christchurch, New Zealand</p>
+            <p class="cv-section__job-dates">August 2023 - June 2024</p>
+        </div>
+        <div class="cv-section__job">
+            <h4 class="cv-section__job-title">Retail Keyholder</h4>
+            <p class="cv-section__job-company">Mountain Warehouse, Christchurch, New Zealand</p>
+            <p class="cv-section__job-dates">October 2022 - May 2023</p>
+        </div>
+        <div class="cv-section__job">
+            <h4 class="cv-section__job-title">Volunteer Rowing Coach</h4>
+            <p class="cv-section__job-company">Onslow Colege Rowing Club, New Zealand</p>
+            <p class="cv-section__job-dates">August 2020 - March 2021</p>
+        </div>
+    </div>
+</div>
 
-<p>About Me</p>
 {% endblock %}
 
-{% block title %}About{% endblock %}
+{% block title %}CV{% endblock %}

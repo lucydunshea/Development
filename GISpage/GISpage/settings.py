@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-e6^6f%o1$7)+1td)f=^vlcz5+^!g_+_3hzycc!==x239*lc_45'
+SECRET_KEY = 'Mzcd6x4pEU3t980efTEIbtdw4kG1zQBm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['lucydunshea.co.nz', '127.0.0.1']
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -73,6 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'GISpage.wsgi.application'
 
+ASGI_APPLICATION = 'GISpage.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
@@ -119,7 +121,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# STATICFILES_DIRS = [BASE_DIR / "static"] doesn't exist in this file
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -132,9 +138,16 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_CONFIGS = {
     'awesome_ckeditor': {
         'toolbar': 'full',
+        'fontFamily': {
+            'options': [
+                'default',
+                'Ubuntu, Arial, sans-serif',
+                'Ubuntu Mono, Courier New, Courier, monospace',
+                "neue-haas-grotesk-text", 'sans-serif'
+            ]
     },
 }
-
+}
 SVG_DIRS=[
         os.path.join(BASE_DIR, 'portfolio/static/portfolio/svg'),
     ]
