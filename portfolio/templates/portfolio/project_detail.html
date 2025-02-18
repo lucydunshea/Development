@@ -1,0 +1,32 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="project-detail-section">
+    <h1 class="project-detail-section__title">{{ project.title }}</h1>
+    <div class="project-detail-section__container">
+        <div class="project-detail-section__image">
+            {% if project.image %}
+            <img class="project-detail-section__image" src="{{ project.detail_image.url }}" alt="{{ project.title }}">
+            {% endif %}
+        </div>
+        <div class="project-detail-section__first">
+            <!-- <div class="project-detail-section__sketch">
+                {% if project.mini_map %}
+                <img class="project-detail-section__sketch-image" src="{{ project.mini_map.url }}" alt="{{ project.title }}">
+                {% endif %}
+            </div>
+            
+            <div class="project-detail-section__description">
+                <p class="project-detail-section__description-text">{{ project.short_description }}</p>
+            </div> -->
+        </div>
+            <p class="project-detail-section__long-description-text">{{ project.description|safe }}</p>
+        </div>
+        <div class="project-detail-section__button-container">
+        <button class="project-detail-section__button"><a href="{{ project.pdf.url }}" class="project-detail-section__button-text">View Full Project</a></button>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
