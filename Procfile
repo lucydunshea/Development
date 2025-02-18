@@ -1,1 +1,1 @@
-web: gunicorn GISpage.wsgi:application
+web: gunicorn GISpage.GISpage.wsgi:application
