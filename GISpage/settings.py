@@ -79,12 +79,11 @@ ASGI_APPLICATION = 'GISpage.asgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+DATABASES = {'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'gispage_db',
         'USER': 'gisuser',
-        'PASSWORD': '021Flok!',
+        'PASSWORD': '021Floki',
         'HOST': 'localhost',
         'PORT': '5432',
     }
