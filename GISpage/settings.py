@@ -26,7 +26,7 @@ SECRET_KEY = DJANGO_SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lucydunshea.co.nz', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,8 +81,12 @@ ASGI_APPLICATION = 'GISpage.asgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gispage_db',
+        'USER': 'gisuser',
+        'PASSWORD': '021Flok!',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

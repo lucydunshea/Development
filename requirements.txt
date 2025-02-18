@@ -13,6 +13,7 @@ django-ckeditor-5==0.2.15
 django-js-asset==3.0.1
 django-multiselectfield==0.1.13
 gunicorn==23.0.0
+honcho==2.0.0
 hyperlink==21.0.0
 idna==3.10
 incremental==24.7.2
